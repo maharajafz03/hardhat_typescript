@@ -2,6 +2,8 @@
 
 pragma solidity ^0.8.0;
 
+import "hardhat/console.sol";
+
 contract token{
 
     string name = "token";
@@ -10,7 +12,9 @@ contract token{
     address owner;
 
       mapping(address => uint) public balance;
-      event Transfer(address indexed _from, address indexed _to, _value);
+      event Transfer(address indexed _from, address indexed _to, uint _value);
+
+       
 
     constructor(){
         owner = msg.sender;
